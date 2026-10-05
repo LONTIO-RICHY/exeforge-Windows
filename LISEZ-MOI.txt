@@ -1,0 +1,47 @@
+EXEFORGE - Createur d'executables Python pour Windows
+=====================================================
+
+Transforme un programme Python (un fichier, ou un projet de plusieurs fichiers) en application
+Windows (.exe) qui fonctionne sans Python installe.
+
+LANCER
+  - Double-clique LANCER.bat            (necessite Python 3.9+ et Pillow : installe tout seul)
+  - ou cree ExeForge.exe avec CREER_EXE.bat (dossier dist\)
+
+UTILISER
+  1. "Choisir un fichier .py" ou "Choisir un dossier" : ExeForge analyse le code.
+  2. Le tableau montre les bibliotheques utilisees : "deja installe" (rien a telecharger)
+     ou "a telecharger" (seules celles-la sont installees).
+  3. Choisis une image (n'importe quel format) : elle devient une icone .ico (16 a 256 px).
+     L'onglet "Convertisseur d'icone" permet d'ajuster / recadrer / arrondir et d'enregistrer le .ico.
+  4. "CREER L'EXECUTABLE" : la barre de progression avance. Puis "Ouvrir le dossier".
+
+PYTHON
+  - ExeForge reutilise le Python deja present (3.12 de preference).
+  - Sinon il installe Python 3.12.10 (stable) pour lui seul : sans droits administrateur, sans
+    modifier le systeme, dans %LOCALAPPDATA%\ExeForge\python312.
+  - Hors-ligne : voir runtime\LISEZ-MOI.txt.
+
+EN CAS DE PROBLEME
+  - ExeForge explique la cause probable (module manquant, Internet, antivirus, chemin trop long...)
+    et ce que tu peux faire a la main, dans le cadre rouge sous la barre de progression.
+  - Boutons "Copier le journal" / "Enregistrer le journal" ; copie auto : %LOCALAPPDATA%\ExeForge\dernier_journal.txt
+  - Le journal contient la ligne "Commande :" que tu peux lancer toi-meme dans cmd.
+  - Si rien ne bouge pendant 2 minutes, un avertissement s'affiche (Annuler possible a tout moment).
+
+FENETRE : redimensionnable a volonte ; F11 = plein ecran, Echap = quitter le plein ecran.
+
+FICHIERS : main.py (demarrage) - app.py (interface) - widgets.py/theme.py (design)
+  analyseur.py (analyse du code) - runtime_python.py (Python et pip) - icones.py (images -> .ico)
+  constructeur.py (creation avec PyInstaller et progression) - diagnostic.py (explication des erreurs)
+Journal d'erreurs : %LOCALAPPDATA%\ExeForge\erreurs.log
+
+CREATEUR / CONTACT
+==================
+Logiciel cree par : LONTIO KESSEL || LONTIO RICHY
+Un probleme ? Une question ? Contacte-moi :
+  WhatsApp : +237 650 196 251   (https://wa.me/237650196251)
+  E-mail   : lontiokessel@gmail.com
+  GitHub   : https://github.com/LONTIo-RICHY
+Dans le logiciel : onglet "Contact / Createur" (ou clic sur la ligne en bas de la fenetre).
+Joins le journal ("Copier le journal" apres un echec) pour que je comprenne vite.

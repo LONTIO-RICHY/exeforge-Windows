@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Résultats de compilation
+build/
+dist/
+*.spec
+ExeForge_sortie/
+
+# Installateur Python optionnel (27 Mo) : à télécharger, pas à versionner
+runtime/*.exe
+
+# Divers
+*.log
+.vscode/
+.idea/
+Thumbs.db
